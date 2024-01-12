@@ -1,0 +1,77 @@
+<div class="pokedex">
+    <label for="search" class="pokedex__search">
+        <input type="text" id="search" name="search" placeholder="Buscar Pokemon...">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+            <path d="M12.5 11H11.71L11.43 10.73C12.41 9.59 13 8.11 13 6.5C13 2.91 10.09 0 6.5 0C2.91 0 0 2.91 0 6.5C0 10.09 2.91 13 6.5 13C8.11 13 9.59 12.41 10.73 11.43L11 11.71V12.5L16 17.49L17.49 16L12.5 11ZM6.5 11C4.01 11 2 8.99 2 6.5C2 4.01 4.01 2 6.5 2C8.99 2 11 4.01 11 6.5C11 8.99 8.99 11 6.5 11Z" fill="white"/>
+        </svg>
+    </label>
+    <ng-container *ngIf="isFound">
+        <div class="pokedex__pokemons">
+            <div class="pokemon">
+                <h1>Nome</h1>
+                <div class="pokemon--type">
+                    <p>Grass</p>
+                    <p>Poison</p>
+                </div>
+                <div class="pokemon--image">
+                    <img src="https://s3-alpha-sig.figma.com/img/bbb9/e5a0/bcb8861670b70789ac8ca92d7cca0be5?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KAnMR677tYMgQHVEII4YE6mFKhQdBlTSTqUEJhRwSKnVWuEHfS2iW8fKIDhXPVMxPke5~8IB9VJGhFrCBcf1Us5HMbeo5PDDuvnlBv0aULU984PeCeE2AJUGi8msIhwLxt1PvtYx9~QOHAfbKaJFpZAiIOLH6CTifx34pASyXkqBY2JUxjWuTH23OBQmKSLYYFzmf5ViJgf5qovm6ccjhQ2NuNvmfDoPdAP-O5OMqWK9Gk3g4Db2jaspY0LI168L2xjPwB0aTENMgizRsvkAuAkha2knXRl1HQOK50xYz~98n5uyCLTQMBlaTB6bL7TYA4zru5obHSv~sSS8XLX-2Q__" alt="Imagem do pokemon.">
+                </div>
+            </div>
+            <div class="pokemon">
+                <h1>Nome</h1>
+                <div class="pokemon--type">
+                    <p>Grass</p>
+                    <p>Poison</p>
+                </div>
+                <div class="pokemon--image">
+                    <img src="https://s3-alpha-sig.figma.com/img/bbb9/e5a0/bcb8861670b70789ac8ca92d7cca0be5?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KAnMR677tYMgQHVEII4YE6mFKhQdBlTSTqUEJhRwSKnVWuEHfS2iW8fKIDhXPVMxPke5~8IB9VJGhFrCBcf1Us5HMbeo5PDDuvnlBv0aULU984PeCeE2AJUGi8msIhwLxt1PvtYx9~QOHAfbKaJFpZAiIOLH6CTifx34pASyXkqBY2JUxjWuTH23OBQmKSLYYFzmf5ViJgf5qovm6ccjhQ2NuNvmfDoPdAP-O5OMqWK9Gk3g4Db2jaspY0LI168L2xjPwB0aTENMgizRsvkAuAkha2knXRl1HQOK50xYz~98n5uyCLTQMBlaTB6bL7TYA4zru5obHSv~sSS8XLX-2Q__" alt="Imagem do pokemon.">
+                </div>
+            </div>
+            <div class="pokemon">
+                <h1>Nome</h1>
+                <div class="pokemon--type">
+                    <p>Grass</p>
+                    <p>Poison</p>
+                </div>
+                <div class="pokemon--image">
+                    <img src="https://s3-alpha-sig.figma.com/img/bbb9/e5a0/bcb8861670b70789ac8ca92d7cca0be5?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KAnMR677tYMgQHVEII4YE6mFKhQdBlTSTqUEJhRwSKnVWuEHfS2iW8fKIDhXPVMxPke5~8IB9VJGhFrCBcf1Us5HMbeo5PDDuvnlBv0aULU984PeCeE2AJUGi8msIhwLxt1PvtYx9~QOHAfbKaJFpZAiIOLH6CTifx34pASyXkqBY2JUxjWuTH23OBQmKSLYYFzmf5ViJgf5qovm6ccjhQ2NuNvmfDoPdAP-O5OMqWK9Gk3g4Db2jaspY0LI168L2xjPwB0aTENMgizRsvkAuAkha2knXRl1HQOK50xYz~98n5uyCLTQMBlaTB6bL7TYA4zru5obHSv~sSS8XLX-2Q__" alt="Imagem do pokemon.">
+                </div>
+            </div>
+            <div class="pokemon">
+                <h1>Nome</h1>
+                <div class="pokemon--type">
+                    <p>Grass</p>
+                    <p>Poison</p>
+                </div>
+                <div class="pokemon--image">
+                    <img src="https://s3-alpha-sig.figma.com/img/bbb9/e5a0/bcb8861670b70789ac8ca92d7cca0be5?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KAnMR677tYMgQHVEII4YE6mFKhQdBlTSTqUEJhRwSKnVWuEHfS2iW8fKIDhXPVMxPke5~8IB9VJGhFrCBcf1Us5HMbeo5PDDuvnlBv0aULU984PeCeE2AJUGi8msIhwLxt1PvtYx9~QOHAfbKaJFpZAiIOLH6CTifx34pASyXkqBY2JUxjWuTH23OBQmKSLYYFzmf5ViJgf5qovm6ccjhQ2NuNvmfDoPdAP-O5OMqWK9Gk3g4Db2jaspY0LI168L2xjPwB0aTENMgizRsvkAuAkha2knXRl1HQOK50xYz~98n5uyCLTQMBlaTB6bL7TYA4zru5obHSv~sSS8XLX-2Q__" alt="Imagem do pokemon.">
+                </div>
+            </div>
+            <div class="pokemon">
+                <h1>Nome</h1>
+                <div class="pokemon--type">
+                    <p>Grass</p>
+                    <p>Poison</p>
+                </div>
+                <div class="pokemon--image">
+                    <img src="https://s3-alpha-sig.figma.com/img/bbb9/e5a0/bcb8861670b70789ac8ca92d7cca0be5?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KAnMR677tYMgQHVEII4YE6mFKhQdBlTSTqUEJhRwSKnVWuEHfS2iW8fKIDhXPVMxPke5~8IB9VJGhFrCBcf1Us5HMbeo5PDDuvnlBv0aULU984PeCeE2AJUGi8msIhwLxt1PvtYx9~QOHAfbKaJFpZAiIOLH6CTifx34pASyXkqBY2JUxjWuTH23OBQmKSLYYFzmf5ViJgf5qovm6ccjhQ2NuNvmfDoPdAP-O5OMqWK9Gk3g4Db2jaspY0LI168L2xjPwB0aTENMgizRsvkAuAkha2knXRl1HQOK50xYz~98n5uyCLTQMBlaTB6bL7TYA4zru5obHSv~sSS8XLX-2Q__" alt="Imagem do pokemon.">
+                </div>
+            </div>
+            <div class="pokemon">
+                <h1>Nome</h1>
+                <div class="pokemon--type">
+                    <p>Grass</p>
+                    <p>Poison</p>
+                </div>
+                <div class="pokemon--image">
+                    <img src="https://s3-alpha-sig.figma.com/img/bbb9/e5a0/bcb8861670b70789ac8ca92d7cca0be5?Expires=1705881600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=KAnMR677tYMgQHVEII4YE6mFKhQdBlTSTqUEJhRwSKnVWuEHfS2iW8fKIDhXPVMxPke5~8IB9VJGhFrCBcf1Us5HMbeo5PDDuvnlBv0aULU984PeCeE2AJUGi8msIhwLxt1PvtYx9~QOHAfbKaJFpZAiIOLH6CTifx34pASyXkqBY2JUxjWuTH23OBQmKSLYYFzmf5ViJgf5qovm6ccjhQ2NuNvmfDoPdAP-O5OMqWK9Gk3g4Db2jaspY0LI168L2xjPwB0aTENMgizRsvkAuAkha2knXRl1HQOK50xYz~98n5uyCLTQMBlaTB6bL7TYA4zru5obHSv~sSS8XLX-2Q__" alt="Imagem do pokemon.">
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!isFound">
+        <div class="pokedex__notfound">
+            <h1>Pokémon não encontrado 🤔</h1>
+        </div>
+    </ng-container>
+</div>
