@@ -11,8 +11,7 @@ import { TranslateService } from '../../services/translate.service';
 })
 export class PokedetailsComponent implements OnInit {
   pokemon?: any;
-  textNotTranslate: string = '';
-  textTranslate: string = '';
+  foundPokemon:boolean = true;
 
   constructor(private pokeService: PokeService, private activatedRoute: ActivatedRoute, private translationService: TranslateService){}
 
@@ -20,12 +19,16 @@ export class PokedetailsComponent implements OnInit {
     this.getPokemon();
   }
 
+  /**
+  * @description Pega o parametro da rota 'name' e faz um get utilizando ela.
+  * @author Nathan Silva
+  */
   getPokemon(){
     const name = String(this.activatedRoute.snapshot.paramMap.get("name"));
     this.pokeService.getPokemon(name).subscribe(
       (pokemon) => {
         this.pokemon = pokemon;
-        this.textNotTranslate = pokemon.name;
+        this.foundPokemon = false;
       }
     )
   }

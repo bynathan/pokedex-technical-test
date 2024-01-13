@@ -1,4 +1,4 @@
-<ng-container *ngIf="pokemon">
+<ng-container *ngIf="!foundPokemon">
     <div class="pokedetails">
         <div class="pokedetails__name">
             <h1>ポケモン</h1>
@@ -13,7 +13,7 @@
     </div>
 </ng-container>
 
-<ng-container *ngIf="!pokemon">
+<ng-container *ngIf="foundPokemon">
     <div class="pokedetails">
         <div class="pokedetails__name">
             <h1>ポケモン</h1>
