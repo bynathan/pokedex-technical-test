@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { PokedexComponent } from './components/pokedex/pokedex.component';
 import { PokemonComponent } from './components/pokedex/pokemon/pokemon.component';
+import { PokedetailsComponent } from './components/pokedetails/pokedetails.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     PokedexComponent,
-    PokemonComponent
+    PokemonComponent,
+    PokedetailsComponent
   ],
   imports: [
     BrowserModule,

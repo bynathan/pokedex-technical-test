@@ -1,0 +1,118 @@
+.pokedetails{
+    display: flex;
+    flex-direction: column;
+    row-gap: 17px;
+    &__name{
+        width: unset;
+        position: relative;
+        margin: 0 30px 0 auto;
+        animation: rightCenter 2s ease;
+        h1{
+            color: rgba(255, 255, 255, 0.10);
+            font-family: 'Roboto', sans-serif;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: normal;
+            margin: 0;
+            text-transform: capitalize;
+        }
+        h2{
+            width: unset;
+            color: #FFF;
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-style: italic;
+            font-weight: 900;
+            line-height: normal;
+            margin: 0;
+            position: absolute;
+            bottom: 2px;
+            right: 9px;
+            text-transform: capitalize;
+        }
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: flex-start;
+        padding: 130px 35px 20px;
+        background: #FFF;
+        border-radius: 60px 60px 0 0;
+        img{
+            width: 200px;
+            min-width: 200px;
+            height: 200px;
+            min-height: 200px;
+            position: absolute;
+            top: -90px;
+            left: 18px;
+            animation: leftCenter 2s ease;
+        }
+        h1{
+            color: #FF5473;
+            font-family: 'Roboto', sans-serif;
+            font-size: 32px;
+            font-style: italic;
+            font-weight: 900;
+            line-height: normal;
+            text-decoration-line: underline;
+            margin: 0 0 20px 0;
+            animation: bottomCenter 2s ease;
+        }
+        p{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #262835;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0 0 2px 0;
+            text-transform: capitalize;
+            animation: bottomCenter 2s ease;
+            strong{
+                width: unset;
+                font-weight: 700;
+            }
+        }
+        input{
+            height: 55px;
+            background: #FF5473;
+            color: #FFF;
+            border-radius: 10px;
+            border: none;
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 20rem 0 0 0;
+            cursor: pointer;
+            transition: background .2s;
+            &:hover{
+                background: #fa375b;
+            }
+        }
+    }
+}
+
+@media(max-width: 630px){
+    .pokedetails{
+        padding: 0 15px;
+        &__info{
+            padding: 25px 35px 20px;
+            img{
+                margin: 0 0 15px 0;
+                position: unset;
+                width: 150px;
+                min-width: 150px;
+                height: 150px;
+                min-height: 150px;
+            }
+        }
+    }
+}

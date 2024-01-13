@@ -5,6 +5,7 @@
     row-gap: 20px;
     &__search{
         position: relative;
+        cursor: text;
         input{
             height: 50px;
             border: none;
@@ -62,6 +63,20 @@
             line-height: normal;
             margin: 0;
             text-align: center;
+        }
+    }
+}
+
+@media(max-width: 630px){
+    .pokedex{
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 480px){
+    .pokedex{
+        &__pokemons{
+            grid-template-columns: 1fr;
         }
     }
 }

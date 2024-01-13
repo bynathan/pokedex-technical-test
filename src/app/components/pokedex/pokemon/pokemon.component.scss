@@ -21,6 +21,7 @@
         line-height: normal;
         margin: 0 0 10px 0;
         text-transform: lowercase;
+        animation: leftCenter 2s ease;
         &::first-letter{
             text-transform: uppercase;
         }
@@ -30,6 +31,7 @@
         display: flex;
         flex-direction: column;
         row-gap: 5px;
+        animation: bottomCenter 3s ease;
         p{
             min-width: 55px;
             height: 16px;
@@ -63,6 +65,7 @@
             min-width: 80px;
             height: 80px;
             min-height: 80px;
+            animation: rightCenter 2s ease;
         }
     }
 }

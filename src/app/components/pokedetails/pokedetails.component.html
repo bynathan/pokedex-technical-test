@@ -1,0 +1,35 @@
+<ng-container *ngIf="pokemon">
+    <div class="pokedetails">
+        <div class="pokedetails__name">
+            <h1>ポケモン</h1>
+            <h2>{{pokemon.name}}</h2>
+        </div>
+        <div class="pokedetails__info">
+            <img [src]="pokemon.sprites.other.dream_world.front_default" [alt]="'Imagem do ' + pokemon.name">
+            <h1>Estatísticas</h1>
+            <p *ngFor="let skill of pokemon.stats">{{skill.stat.name}}<strong>{{skill.base_stat}}</strong></p>
+            <input routerLink="/pokedex" type="button" value="Voltar">
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="!pokemon">
+    <div class="pokedetails">
+        <div class="pokedetails__name">
+            <h1>ポケモン</h1>
+            <h2>Desconhecido</h2>
+        </div>
+        <div class="pokedetails__info">
+            <img src="/assets/images/notfoundpokemon.png" alt="Imagem pokemon desconhecido">
+            <h1>Estatísticas</h1>
+            <p>Hp<strong>??</strong></p>
+            <p>Attack<strong>??</strong></p>
+            <p>Defense<strong>??</strong></p>
+            <p>Special-attack<strong>??</strong></p>
+            <p>Special-defense<strong>??</strong></p>
+            <p>Speed<strong>??</strong></p>
+            <input routerLink="/pokedex" type="button" value="Voltar">
+        </div>
+    </div>
+</ng-container>
+

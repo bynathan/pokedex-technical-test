@@ -1,5 +1,5 @@
-<div class="pokemon">
-    <h1>{{pokemon.name}}</h1>
+<div class="pokemon" routerLink="/pokemon/{{pokemon.details.name}}">
+    <h1>{{pokemon.details.name}}</h1>
     <div class="pokemon--type">
         <p *ngFor="let class of pokemon.details.types">{{ class.type.name }}  </p>
     </div>

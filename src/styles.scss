@@ -16,3 +16,38 @@ html{
 ::-webkit-scrollbar{
     width: 0;
 }
+
+/*Animations*/
+
+@keyframes leftCenter {
+    0%{
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 100;
+    }
+}
+
+@keyframes rightCenter {
+    0%{
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 100;
+    }
+}
+
+@keyframes bottomCenter {
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 100;
+    }
+}

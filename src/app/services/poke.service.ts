@@ -8,7 +8,8 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class PokeService {
-  private placePokemonUrl = 'pokemon?limit=100&offset=0';
+  private placePokemonsUrl = 'pokemon?limit=100&offset=0';
+  private placePokemonUrl = 'pokemon/';
 
   constructor(private http: HttpClient) { }
 
@@ -17,7 +18,15 @@ export class PokeService {
   * @author Nathan Silva
   */
   getPokemons(): Observable<any>{
-    return this.http.get<any>(`${environment.baseApiUrl}${this.placePokemonUrl}`);
+    return this.http.get<any>(`${environment.baseApiUrl}${this.placePokemonsUrl}`);
+  }
+
+  /**
+  * @description Obtem um pokemon especifico.
+  * @author Nathan Silva
+  */
+  getPokemon(name: string): Observable<any>{
+    return this.http.get<any>(`${environment.baseApiUrl}${this.placePokemonUrl}${name}`);
   }
 
   /**

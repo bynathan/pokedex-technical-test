@@ -10,8 +10,6 @@ export class PokedexComponent implements OnInit {
   pokemons: any[] = [];
   allPokemons: any[] = [];
 
-  public isFound:boolean = true;
-
   constructor(private pokeService: PokeService){
   }
 
@@ -30,8 +28,8 @@ export class PokedexComponent implements OnInit {
         // Faço um "map" para que pegue a url de todos os pokemons e faça um GET das informações de detalhes que contem na url.
         response.results.map((pokemon: any) => this.pokeService.getUrlDetailPokemon(pokemon.url).subscribe(
           (detailsPokemon: object) => {
-            // Envio o novo objeto com o pokemon e os detalhes adiquiridos na url para um array.
-            this.pokemons.push({ ...pokemon, details: detailsPokemon });
+            // Envio o novo objeto com o detalhes do pokemon adiquiridos na url para um array.
+            this.pokemons.push({ details: detailsPokemon });
             // Atribuo a outra variavel para utilizala novamente no filtro.
             this.allPokemons = this.pokemons;
           }
@@ -48,7 +46,7 @@ export class PokedexComponent implements OnInit {
     this.pokemons = this.allPokemons;
 
     const filter = this.pokemons.filter((pokemon: any) => {
-      return pokemon.name.toLowerCase().indexOf(value.toLowerCase()) !== -1;
+      return pokemon.details.name.toLowerCase().indexOf(value.toLowerCase()) !== -1;
     });
   
     this.pokemons = filter;
