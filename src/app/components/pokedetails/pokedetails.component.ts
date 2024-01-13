@@ -3,6 +3,7 @@ import { PokeService } from 'src/app/services/poke.service';
 import { ActivatedRoute } from '@angular/router';
 
 import { TranslateService } from '../../services/translate.service';
+import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
   selector: 'app-pokedetails',
@@ -26,9 +27,14 @@ export class PokedetailsComponent implements OnInit {
   getPokemon(){
     const name = String(this.activatedRoute.snapshot.paramMap.get("name"));
     this.pokeService.getPokemon(name).subscribe(
-      (pokemon) => {
+      (pokemon:any) => {
         this.pokemon = pokemon;
-        this.foundPokemon = false;
+        this.foundPokemon = true;
+      },
+      (error: HttpErrorResponse) => {
+        if (error.status === 404) {
+          this.foundPokemon = false;
+        }
       }
     )
   }
