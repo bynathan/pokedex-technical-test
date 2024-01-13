@@ -16,7 +16,7 @@
             font-style: normal;
             font-weight: 300;
             line-height: normal;
-            padding: 14px 20px;
+            padding: 14px 55px 14px 20px;
             &::placeholder{
                 color: #FFF;
                 font-family: 'Roboto', sans-serif;
@@ -69,6 +69,10 @@
                 font-weight: 900;
                 line-height: normal;
                 margin: 0 0 10px 0;
+                text-transform: lowercase;
+                &::first-letter{
+                    text-transform: uppercase;
+                }
             }
             &--type{
                 width: unset;
@@ -90,6 +94,7 @@
                     font-weight: 400;
                     line-height: normal;
                     margin: 0;
+                    text-transform: capitalize;
                 }
             }
             &--image{
