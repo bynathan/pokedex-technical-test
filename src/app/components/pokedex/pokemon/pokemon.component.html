@@ -1,0 +1,9 @@
+<div class="pokemon">
+    <h1>{{pokemon.name}}</h1>
+    <div class="pokemon--type">
+        <p *ngFor="let class of pokemon.details.types">{{ class.type.name }}  </p>
+    </div>
+    <div class="pokemon--image">
+        <img [src]="pokemon.details.sprites.other.dream_world.front_default" [alt]="'Imagem do ' + pokemon.name">
+    </div>
+</div>
