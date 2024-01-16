@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeService } from 'src/app/services/poke.service';
 import { ActivatedRoute } from '@angular/router';
-
-import { TranslateService } from '../../services/translate.service';
 import { HttpErrorResponse } from '@angular/common/http';
 
 @Component({
@@ -14,7 +12,7 @@ export class PokedetailsComponent implements OnInit {
   pokemon?: any;
   foundPokemon:boolean = true;
 
-  constructor(private pokeService: PokeService, private activatedRoute: ActivatedRoute, private translationService: TranslateService){}
+  constructor(private pokeService: PokeService, private activatedRoute: ActivatedRoute){}
 
   ngOnInit(): void {
     this.getPokemon();

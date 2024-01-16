@@ -36,8 +36,4 @@ export class PokeService {
   getUrlDetailPokemon(url: string){
     return this.http.get<any>(url);
   }
-
-  teste(result: any) {
-    console.log(result);
-  }
 }
